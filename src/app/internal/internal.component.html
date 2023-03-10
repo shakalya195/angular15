@@ -1,0 +1,54 @@
+<header class="header internal-header">
+    <div class="container-fluid">
+        <div class="col-md-12 px-0">
+            <nav class="navbar navbar-expand-lg navbar-inner">
+
+                <a  routerLink="/" class="navbar-brand" href="javascript://"><img src="assets/images/logo.png" alt="logo" ></a>
+
+                
+                <div class="nav-brand">
+                    <a routerLink="/admin/dashboard" class="navbar-brand internal-logo" href="javascript://">
+                        <img [src]="user?.profilePicture?.thumbnail" onerror="this.src='assets/images/favicon.svg'" alt="" >
+                    </a>
+                    <span class="profileName">{{user?.name}}</span>
+                    <span class="userRole">
+                        {{user?.type}}
+                    </span>
+                </div>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" #navbarToggler>
+                  <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript://" [routerLinkActive]="'active'" routerLink="dashboard" >
+                            <img class="active" src="assets/images/icon-1-active.png" alt="" >
+                            <img class="inactive" src="assets/images/icon-1.png" alt="">
+                           <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-overlay-badge" href="javascript://" [routerLinkActive]="'active'" routerLink="settings" >
+                            <img class="inactive" src="assets/images/icon-7.png" alt="">
+                            <img class="active" src="assets/images/icon-7-active.png" alt="">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li (click)="logout()" class="nav-item">
+                        <a class="nav-link" href="javascript://">
+                            <span><span class="fa fa-sign-out" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                  </ul>
+                  <!-- <pre>{{user?.views | json}}</pre> -->
+                </div>  
+              </nav>
+        </div>
+    </div>
+</header>
+
+<router-outlet></router-outlet>

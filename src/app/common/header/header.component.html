@@ -1,0 +1,37 @@
+  <!-- header Start -->
+  <header id="headerMain" class="header external-header" #headerMain>
+    <div class="container-fluid">
+        <div class="col-md-12 px-0">
+            <nav class="navbar navbar-expand-md navbar-custom">
+                <a  routerLink="/" class="navbar-brand" href="javascript://"><img src="assets/images/logo.png" alt="logo" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" #navbarToggler>
+                  <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLinkActive]="'active'" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" href="javascript://" (click)="collapseNav()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLinkActive]="'active'" routerLink="/login" href="javascript://" (click)="collapseNav()">login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLinkActive]="'active'" routerLink="/admin" >Dashboard</a>
+                    </li>
+                    <li *ngIf="user"  class="nav-item">
+                      <a class="nav-link login-btn" routerLink="/admin/dashboard" >Dashboard</a>
+                    </li>
+                    <li *ngIf="!user"  class="nav-item">
+                      <a class="nav-link login-btn" routerLink="/login"  (click)="collapseNav()" >login</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </div>
+</header>
+<!-- header Start -->

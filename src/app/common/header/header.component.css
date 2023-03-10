@@ -1,0 +1,68 @@
+/* Internal Header CSS Start */
+.profileName{
+    padding: 0;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.external-header {
+    background-color: #8E88F4;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-inner .navbar-collapse {
+    justify-content: flex-end;
+}
+.nav-brand .dropdown-toggle {
+    padding: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.navbar-inner .nav-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    color: #fff;
+    padding: 0px 13px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all .4s;
+}
+.navbar-inner .nav-link img{
+    margin-right: 10px;
+}
+.navbar-inner .nav-link .active,.navbar-inner .nav-link:hover .inactive,.navbar-inner .nav-link.active .inactive{
+    display: none;
+}
+.navbar-inner .nav-link:hover .active,.navbar-inner .nav-link.active .active{
+    display: inline-block;
+}
+.navbar-inner .nav-link.active,.navbar-inner .nav-link:hover{
+    background-color: #fff;
+    color: #8F89F5;
+}
+.navbar-nav .nav-item + .nav-item {
+    margin-left: 10px;
+}
+.navbar-inner .nav-link.active{
+    font-weight: 700;
+}
+/* Internal Header CSS End */
+/* Cards CSS Start */
+.dashboard-wrapper{
+    margin-top: 40px;
+}
